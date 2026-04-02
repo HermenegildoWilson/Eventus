@@ -10,7 +10,7 @@ import {
   TextField,
 } from '@mui/material';
 
-import { type FieldConfig } from '../data/entities';
+import { type FieldConfig } from '../data/types';
 
 type FormMode = 'create' | 'edit';
 

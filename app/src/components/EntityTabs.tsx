@@ -1,5 +1,5 @@
 import { Paper, Tab, Tabs } from '@mui/material';
-import { type EntityConfig } from '../data/entities';
+import { type EntityConfig } from '../data/types';
 
 interface EntityTabsProps {
   entities: EntityConfig[];

@@ -3,7 +3,7 @@ import { Alert, Box, Button, IconButton, Stack, Tooltip, Typography } from '@mui
 import AddIcon from '@mui/icons-material/Add';
 import RefreshIcon from '@mui/icons-material/Refresh';
 
-import { type EntityConfig, type FieldConfig } from '../data/entities';
+import { type EntityConfig, type FieldConfig } from '../data/types';
 import EntityFormDialog from './EntityFormDialog';
 import EntityDetailsDialog from './EntityDetailsDialog';
 import EntityTable from './EntityTable';
@@ -11,7 +11,7 @@ import { useEntityData, type EntityRecord } from '../hooks/useEntityData';
 
 type FormMode = 'create' | 'edit';
 
-type FormValue = Record<string, any>;
+type FormValue = Record<string, unknown>;
 
 function buildEmptyForm(fields: FieldConfig[]) {
   return fields.reduce<FormValue>((acc, field) => {
@@ -40,6 +40,7 @@ export default function EntityManager({ config }: { config: EntityConfig }) {
 
   useEffect(() => {
     void load();
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setFormData(buildEmptyForm(config.fields));
     setSelected(null);
   }, [config, load]);

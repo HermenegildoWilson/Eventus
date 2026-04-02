@@ -1,13 +1,14 @@
 import { useMemo, useState } from 'react';
 import { Box, Container, Divider } from '@mui/material';
 
-import './App.css';
-import EntityManager from './components/EntityManager';
 import EntityTabs from './components/EntityTabs';
+import EntityManager from './components/EntityManager';
 import HeroSection from './components/HeroSection';
-import PageFooter from './components/PageFooter';
-import PageHeader from './components/PageHeader';
-import { entities } from './data/entities';
+import Footer from './layout/Footer';
+import Header from './layout/Header';
+
+import './App.css';
+import entities from './data/entities';
 
 function App() {
   const [active, setActive] = useState(0);
@@ -15,7 +16,7 @@ function App() {
 
   return (
     <Box className="app-root">
-      <PageHeader />
+      <Header />
       <HeroSection />
 
       <Container maxWidth="lg" sx={{ py: 6 }}>
@@ -24,7 +25,7 @@ function App() {
         <EntityManager config={activeEntity} />
       </Container>
 
-      <PageFooter />
+      <Footer />
     </Box>
   );
 }

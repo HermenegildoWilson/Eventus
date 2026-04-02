@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react';
-import { apiFetch } from '../api/client';
+import { apiFetch } from '../config/api/client';
 
 export type EntityRecord = Record<string, unknown> & { id?: number };
 

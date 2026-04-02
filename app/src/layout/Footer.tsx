@@ -1,6 +1,6 @@
 import { Box, Container, Typography } from '@mui/material';
 
-export default function PageFooter() {
+export default function Footer() {
   return (
     <Box component="footer" className="footer">
       <Container maxWidth="lg">

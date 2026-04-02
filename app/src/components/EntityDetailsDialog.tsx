@@ -8,7 +8,7 @@ import {
   Stack,
   Typography,
 } from '@mui/material';
-import { type FieldConfig } from '../data/entities';
+import { type FieldConfig } from '../data/types';
 import { type EntityRecord } from '../hooks/useEntityData';
 
 interface EntityDetailsDialogProps {

@@ -1,7 +1,7 @@
 import { AppBar, Box, Chip, Stack, Toolbar } from '@mui/material';
-import { API_BASE_URL } from '../config';
+import { API_BASE_URL } from '../config/env';
 
-export default function PageHeader() {
+export default function Header() {
   return (
     <AppBar position="sticky" elevation={0} color="transparent" className="app-bar">
       <Toolbar sx={{ justifyContent: 'space-between' }}>
